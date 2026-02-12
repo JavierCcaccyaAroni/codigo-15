@@ -1,0 +1,10 @@
+div.gallery {
+    display: flex;
+}
+div.gallery a img {
+    border: solid 1px blue;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
