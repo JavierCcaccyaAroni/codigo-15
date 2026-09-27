@@ -1,10 +1,114 @@
-div.gallery {
-    display: flex;
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --primary: #1d4ed8;
+    --accent: #e2e8f0;
+    --text: #1f2937;
+    --shadow: rgba(15, 23, 42, 0.12);
 }
-div.gallery a img {
-    border: solid 1px blue;
-    width: 200px;
-    height: auto;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+    color: var(--text);
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #0f172a;
+    color: white;
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 10px var(--shadow);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-header nav a:hover {
+    color: white;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.card {
+    background: var(--panel);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery a {
+    display: inline-block;
+    background: var(--accent);
+    border-radius: 12px;
+    padding: 0.7rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgba(29, 78, 216, 0.15);
+}
+
+.gallery a img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+}
+
+.site-footer {
+    background: #111827;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 1rem 0;
 }
